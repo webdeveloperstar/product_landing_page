@@ -1,0 +1,245 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Arizonia&family=Butterfly+Kids&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap')
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    background: linear-gradient(90deg, #b7b78a 50%, #3c6255 50%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    background-color: #dddddd;
+    width: 90%;
+    height: 90vh;
+}
+
+/* .logo img{
+    width: 4rem;
+    height: 4rem;
+} */
+
+.navbar .logo{
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 3px solid #3c6255;
+    border-radius: 50%;
+    border-right-color: transparent;
+    position: relative;
+}
+
+.navbar .logo::before{
+    content: "GRKhan";
+    color: green;
+    font-size: 30PX;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-15%, -50%);
+    font-family: "Archivo Black", sans-serif;
+}
+
+.navbar{
+    width: 90%;
+    margin: auto;
+    height: 15vh;
+}
+
+.navbar, .navlist{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navlist li{
+    list-style: none;
+    padding: 20px;
+}
+
+.navlist a{
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+}
+
+.navlist a::before{
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3c6255;
+    transition: .3s ease-in-out;
+}
+
+.navlist a:hover::before{
+    width: 100%;
+}
+
+/* === hero section === */
+
+.hero{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.hero img{
+    width: 45vw;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border-left: 3px solid #3c6255;
+    padding: 20px 50px;
+}
+
+.content h3{
+    color: green;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.content h1{
+    color: #3c6255;
+    font-size: 60px;
+}
+
+.content p{
+    color: black;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.content button{
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    background-color: #3c6255;
+    cursor: pointer;
+}
+
+.content button:hover{
+    background-color: white;
+    color: #3c6255;
+}
+
+
+.hamburger{
+    display: none;
+}
+
+.hamburger span{
+    width: 15px;
+    height: 3px;
+    background-color: black;
+    display: block;
+    margin: 5px;
+}
+
+.hamburger span:nth-child(2){
+    width: 30px;
+}
+
+
+
+@media screen  and (max-width: 1207px) {
+    .content h1{
+        font-size: 40px;
+    }
+
+   
+
+    .content p{
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+
+@media screen and (max-width: 1110px){
+    .content{
+        padding: 0px 40px;
+    }
+}
+
+
+@media screen and (max-width: 796px){
+
+    .wrapper{
+        position: relative;
+        overflow: hidden;
+        
+        
+    }
+    .navlist{
+       position: absolute;
+       flex-direction: column;
+       right: -70%;
+       top: -17px;
+       width: 300px;
+       height: 100%;
+       justify-content: center;
+       background-color: #b7b78a
+       
+    }
+
+   .content h3{
+    margin-bottom: 5px;
+    margin-left: 50px;
+   }
+    
+    
+    
+
+    .navlist-active{
+        right: 0;
+    }
+    
+
+     .hamburger{
+        display: block;
+        z-index: 5;
+    }
+
+    .hero img{
+        display: none;
+    }
+
+    .content h1{
+        font-size: 40px;
+        margin-top: 10px;
+    }
+
+    .content p{
+        font-size: 18px;
+        line-height: 30px;
+        margin-top: -15px;
+    }
+
+    
+}
